@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.brian.intentcalculatorb.navigation.AppNav
 import com.brian.intentcalculatorb.ui.theme.IntentcalculatorbTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             IntentcalculatorbTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                   AppNav()
+
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    IntentcalculatorbTheme {
-        Greeting("Android")
     }
 }
